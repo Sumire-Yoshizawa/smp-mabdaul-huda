@@ -409,6 +409,13 @@ li {
   margin-top: 3.5rem;
 
 }
+footer__map{
+    width="320"
+    height=200" 
+    frameborder="0";
+    border:none;
+    border-radius: .5rem;
+}
 .
 
 /*========== MEDIA QUERIES ==========*/
@@ -491,7 +498,10 @@ li {
   }
 .contact-button
 }
-.map{
+.footer__map{
+    frameborder="0";
+    border:none;
+    border-radius: .5rem;
     width="100" ;
     height="100" ;
   }
@@ -518,7 +528,12 @@ li {
     .home__container {
         height: 640px;
     }
-  .maps{
+  .footer__map{
+    width="320"
+    height=200" 
+    frameborder="0";
+    border:none;
+    border-radius: .5rem;
     width="230" ;
     height="180" ;
   }

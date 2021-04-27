@@ -402,6 +402,14 @@ li {
   color: var(--first-color);
 }
 
+.footer__content.iframe{
+    width: 320;
+    height: 220;
+    frameborder: 0;
+    border: none;
+    border-radius: 5rem;
+}
+
 .footer__copy {
   text-align: center;
   font-size: var(--small-font-size);
@@ -409,14 +417,8 @@ li {
   margin-top: 3.5rem;
 
 }
-.footer__map{
-    width: 320;
-    height: 220;
-    frameborder: 0;
-    border: none;
-    border-radius: 5rem;
-}
-.
+
+
 
 /*========== MEDIA QUERIES ==========*/
 @media screen and (min-width: 576px){
@@ -498,7 +500,7 @@ li {
   }
 .contact-button
 }
-.footer__map{
+.footer__content.iframe{
     frameborder: 0;
     border:none;
     border-radius: 5rem;
@@ -528,7 +530,7 @@ li {
     .home__container {
         height: 640px;
     }
-  .footer__map{
+  .footer__content.iframe{
     frameborder: 0;
     border: none;
     border-radius: 5rem;

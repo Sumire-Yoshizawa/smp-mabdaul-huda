@@ -25,6 +25,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 
+
 /*==================== CHANGE BACKGROUND HEADER ====================*/ 
 function scrollHeader(){
     const nav = document.getElementById('header')
@@ -40,10 +41,7 @@ function scrollTop(){
     if(this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollTop)
-/*==================== popup ====================*/
-function togglePopup(){
-  document.getElementById("popup-1").classList.toggle("active");
-}
+
 /*==================== DARK LIGHT THEME ====================*/ 
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
@@ -73,7 +71,7 @@ setTimeout(function(){
     // We save the theme and the current icon that the user chose
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
-   }, 500);
+   }, 400);
 })
 
 /*==================== SCROLL REVEAL ANIMATION ====================*/
@@ -86,7 +84,7 @@ const sr = ScrollReveal({
 
 sr.reveal(`.home__data, .home__img,
             .about__data, .about__img,
-            .services__content, .menu__content,
+            .services__content, .gallery__content,
             .app__data, .app__img,
             .contact__data, .contact__button,
             .footer__content`, {

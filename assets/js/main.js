@@ -92,18 +92,14 @@ sr.reveal(`.home__data, .home__img,
 })
 
 
-    var client = {
-     init: function() {
-          var o=this;
+$(document).ready(function(){
+// this part disables the right click
+$('img').on('contextmenu', function(e) {
+return false;
+});
+//this part disables dragging of image
+$('img').on('dragstart', function(e) {
+return false;
+});
 
-          // this will disable dragging of all images
-          $("img").mousedown(function(e){
-               e.preventDefault()
-          });
-
-          // this will disable right-click on all images
-          $("body").on("contextmenu",function(e){
-               return false;
-          });
-    }
-};
+});

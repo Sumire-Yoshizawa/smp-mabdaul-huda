@@ -16,6 +16,7 @@ inputs.forEach((input) => {
   input.addEventListener("focus", focusFunc);
   input.addEventListener("blur", blurFunc);
 });
+/*
 $('form').on('submit', function( event ) {
   var $form = $( this );
 
@@ -30,7 +31,7 @@ gradeField.addEventListener("success", function() {
   }
 });
   $.ajax({
-    url: '/someurl',
+    url: '/contact/index.html',
     type: 'POST',
     data: $form.serialize(),
     success: function(response){
@@ -38,4 +39,4 @@ gradeField.addEventListener("success", function() {
         $('.js-btn').button('reset');
     }
   });
- });
+ }); */

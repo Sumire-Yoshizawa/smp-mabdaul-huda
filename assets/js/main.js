@@ -381,9 +381,5 @@ img.ondragstart = () => {
   return false ;
 };
 
-document.addEventListener("contextmenu", function(event){
-    event.preventDefault();
-       
-    }, false);
 
 

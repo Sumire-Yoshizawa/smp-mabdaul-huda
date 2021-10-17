@@ -6,7 +6,7 @@
   --header-height: 3rem;
 
   /*========== Colors ==========*/
-  --first-color: #069C54;
+  --first-color: #176b28;
   --first-color-alt: #048654;
   --title-color: #393939;
   --text-color: #707070;
@@ -350,19 +350,15 @@ button::after {
 }
 
 .services__content {
-  text-align: center;
+  margin: auto;
+  align-items: center;
+  text-align: start;
 }
 
 li {
   display: list-item;
 }
 
-.services__img {
-  width: 64px;
-  height: 64px;
-  fill: var(--first-color);
-  margin-bottom: var(--mb-2);
-}
 
 .services__title {
   font-size: var(--h3-font-size);
@@ -371,7 +367,7 @@ li {
 }
 
 .services__description {
-  padding: 0 1.5rem;
+  padding: 0 1rem;
 }
 
 /*========== GALLERY ==========*/
@@ -776,3 +772,42 @@ div.carouSnap div.indCat > ul > li.active {
 }
 
 /*end*/
+/* List */
+ul.target {
+  counter-reset: index;  
+  padding: 0;
+  max-width: 300px;
+}
+
+/* List element */
+li.item  {
+  counter-increment: index; 
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  box-sizing: border-box;
+}
+
+
+/* Element counter */
+li.item::before {
+  content: counters(index, ".", decimal-leading-zero);
+  font-size: 1.5rem;
+  text-align: right;
+  font-weight: bold;
+  min-width: 50px;
+  padding-right: 12px;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+  align-self: flex-start;
+  background-image: linear-gradient(to bottom, rgb(44, 224, 134),rgb(8, 80, 44) );
+  background-attachment: fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Element separation */
+li.item + li.item {
+  border-top: 1px solid rgba(58, 92, 62, 0.781);
+}

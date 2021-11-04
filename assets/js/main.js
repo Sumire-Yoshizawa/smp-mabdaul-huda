@@ -24,6 +24,24 @@ function linkAction(){
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive(){
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50;
+        sectionId = current.getAttribute('id')
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+        }else{
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)
 
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/ 
@@ -69,6 +87,7 @@ setTimeout(function(){
     // Add or remove the dark / icon theme
     themeButton.classList.toggle(iconTheme)
     document.body.classList.toggle(darkTheme)
+
     // We save the theme and the current icon that the user chose
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
@@ -85,12 +104,13 @@ const sr = ScrollReveal({
 
 sr.reveal(`.home__data, .home__img,
             .about__data, .about__img,
-            .services__content, .gallery__content,
+            .target__content, .gallery__content,
             .app__data, .app__img,
             .contact__data, .contact__button,
             .footer__content`, {
     interval: 200
 })
+
 //carousnap
 let isScroll = true;
 
@@ -370,16 +390,9 @@ window.addEventListener("click", function (e) {
 });
 
 //end
-
-
-
-
 //disable item
 
 const img = document.querySelector('img')
 img.ondragstart = () => {
   return false ;
 };
-
-
-

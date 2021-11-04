@@ -233,7 +233,6 @@ img {
 .active-link{
   color: var(--hover);
   text-shadow: var(--shadow);
-
 }
 
 
@@ -461,7 +460,7 @@ li {
   color: var(--first-color);
 }
 .footer__href, .footer__href:link, .footer__href:hover, .footer__href:focus, .footer__href:active{
-  color: currentColor; 
+  color: var(--text-color-light);
   cursor: pointer;
   text-decoration: underline;
   transition: background-color 0.4s ease;

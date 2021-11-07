@@ -831,6 +831,7 @@ li.item::before {
   align-self: flex-start;
   background-image: linear-gradient(to bottom, rgb(44, 224, 134),rgb(8, 80, 44) );
   background-attachment: fixed;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

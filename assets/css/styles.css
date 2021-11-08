@@ -93,6 +93,15 @@ body {
   transition: background-color 0.5s ease;
 }
 
+.main-container {
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.scroll {
+  
+
+
 h1,
 h2,
 h3,
@@ -117,7 +126,11 @@ img {
 
 /*========== CLASS CSS ==========*/
 .section {
+  scroll-snap-align: start;
+  max-width: 100vh;
+  margin: 0 auto;
   padding: 4rem 0 2rem;
+	position: relative;
 }
 
 .section-title,
